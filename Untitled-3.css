@@ -1,0 +1,132 @@
+.navbar {
+    background: #000000; /* Solid black background */
+    color: white; /* White text */
+    padding: 15px 0; /* Padding for the navbar */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    margin: auto; /* Center the container */
+    padding: 0 20px; /* Padding for the container */
+}
+
+.logo {
+    font-size: 28px; /* Logo font size */
+    font-weight: bold; /* Bold logo */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Light shadow for logo */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 18px; /* Font size for links */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: -5px; /* Position it below the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background: #ffcc00; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand width on hover */
+    left: 0; /* Align to the left */
+}
+.cc{
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 20px;
+    text-shadow:2px 4px 30px gold;
+}
+
+.ccontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.main-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow for contrast */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+.text-content {
+    background-color: #222; /* Dark gray background for the text content */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Light shadow for contrast */
+    width: 80%; /* Set width to control the content area */
+    max-width: 600px; /* Max width for larger screens */
+    margin-bottom: 20px; /* Space between text and additional photos */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+.text-content h1 {
+    margin: 0 0 10px;
+}
+
+.additional-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.additional-photo {
+    width: 150px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
